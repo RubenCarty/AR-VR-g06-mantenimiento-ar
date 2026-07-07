@@ -1,111 +1,158 @@
-# Asistente de Mantenimiento AR
-## Repositorio de Proyecto — PSISP08075 Realidad Virtual y Aumentada
+# AR Maintenance Assistant
+
+## Repositorio del Proyecto — PSISP08075 Realidad Virtual y Aumentada
 ### Universidad Autónoma del Perú | Ingeniería de Sistemas | 2026-1
 
 ---
 
-## Descripción del Proyecto
+# Descripción del Proyecto
 
-App AR para técnicos que muestra instrucciones de mantenimiento al escanear equipos industriales.
+AR Maintenance Assistant es una aplicación de Realidad Aumentada para dispositivos Android desarrollada en Unity, cuyo propósito es asistir al usuario durante el mantenimiento preventivo de computadoras de escritorio.
+
+La aplicación utiliza la PC real como elemento principal de interacción y emplea Realidad Aumentada para mostrar instrucciones paso a paso, paneles holográficos, overlays contextuales, indicadores visuales y modelos 3D de apoyo durante todo el procedimiento de mantenimiento.
+
+Su arquitectura modular permite administrar los procedimientos mediante archivos JSON externos, facilitando la actualización y ampliación de los contenidos sin necesidad de recompilar la aplicación.
 
 | Campo | Detalle |
 |-------|---------|
-| **Tipo XR** | AR |
-| **Motor** | Unity 2022.3.62f1 |
-| **Tecnología principal** | Vuforia Engine (Model Targets) |
+| **Tipo XR** | Realidad Aumentada (AR) |
+| **Motor** | Unity 2022.3.62f1 LTS |
+| **Lenguaje** | C# |
+| **Tecnologías principales** | AR Foundation · ARCore XR Plugin |
+| **Plataforma objetivo** | Android |
 | **Curso** | PSISP08075 — Realidad Virtual y Aumentada |
 | **Semestre** | 2026-1 |
 
 ---
 
-## Integrantes del Grupo
+# Objetivo
+
+Desarrollar un asistente de mantenimiento preventivo basado en Realidad Aumentada que guíe al usuario mediante recursos visuales interactivos durante cada etapa del procedimiento, mejorando la comprensión, reduciendo errores y ofreciendo una experiencia de aprendizaje moderna y accesible.
+
+---
+
+# Integrantes del Grupo
 
 | Nombre | Código | Rol |
 |--------|--------|-----|
 | | | Líder del proyecto |
-| | | Desarrollador AR/VR |
-| | | Diseñador UX/3D |
-| | | QA / Documentación |
+| | | Desarrollo AR |
+| | | Desarrollo Unity |
+| | | Modelado 3D y UI |
+| | | Documentación y pruebas |
 
 ---
 
-## Instalación y Uso
+# Instalación y Uso
 
-### Requisitos
+## Requisitos
 
-- Unity 2022.3.62f1 (LTS)
-- Android 7.0+ (API 24+) con ARCore compatible
-- AR Foundation 5.1.x
-- Vuforia Engine (Model Targets)
+- Unity 2022.3.62f1 LTS
+- Android 7.0 o superior (API 24+)
+- Dispositivo compatible con ARCore
+- AR Foundation
+- ARCore XR Plugin
 
-### Clonar el repositorio
+## Clonar el repositorio
 
 ```bash
 git clone https://github.com/RubenCarty/rva-g06-mantenimiento-ar.git
 cd rva-g06-mantenimiento-ar
 ```
 
-### Abrir en Unity
+## Abrir en Unity
 
-1. Abrir Unity Hub
-2. "Add" → seleccionar la carpeta del proyecto
-3. Abrir con Unity 2022.3.62f1
-4. `File → Build Settings → Android → Build and Run`
+1. Abrir Unity Hub.
+2. Seleccionar **Add**.
+3. Elegir la carpeta del proyecto.
+4. Abrir con Unity 2022.3.62f1 LTS.
+5. Esperar la importación automática de paquetes.
+6. Compilar para Android mediante **Build Settings → Android → Build and Run**.
 
 ---
 
-## Progreso del Proyecto
+# Estado del Proyecto
+
+🚧 En desarrollo
+
+---
+
+# Progreso del Proyecto
 
 | Semanas | Hito | Estado |
 |---------|------|--------|
-| S01-S02 | Investigación y planteamiento del problema + idea inicial del proyecto | ⏳ Pendiente |
-| S03-S04 | Definición del MVP (Minimum Viable Product) + arquitectura técnica | ⏳ Pendiente |
-| S05-S06 | Prototipo básico funcional — primera iteración con Unity | ⏳ Pendiente |
-| S07-S08 | Funcionalidades de interacción implementadas | ⏳ Pendiente |
-| S09-S10 | Escenarios 3D y UI/UX del proyecto | ⏳ Pendiente |
-| S11-S12 | Integración de datos / features especiales del proyecto | ⏳ Pendiente |
-| S13-S14 | Audio, optimización y pruebas de usabilidad | ⏳ Pendiente |
-| S15-S16 | Proyecto final completo + presentación | ⏳ Pendiente |
-
+| S01-S02 | Investigación del problema, definición de la propuesta y planificación inicial del proyecto | ✅ Completado |
+| S03-S04 | Configuración del entorno de desarrollo, creación del proyecto en Unity y definición de la arquitectura base | ✅ Completado |
+| S05-S06 | Desarrollo del primer prototipo funcional: panel principal, modelos 3D de prueba y scripts iniciales en C# | ✅ Completado |
+| S07-S08 | Implementación del flujo básico del procedimiento, navegación entre pasos y validación del funcionamiento general del prototipo | ✅ Completado |
+| S09-S10 | Refactorización de la arquitectura, implementación del Procedure Manager y sistema de procedimientos basado en archivos JSON | 🚧 En progreso |
+| S11-S12 | Desarrollo de la interfaz AR definitiva, overlays contextuales, indicadores visuales y recursos 3D de apoyo | ⏳ Pendiente |
+| S13-S14 | Integración completa del procedimiento de mantenimiento, optimización, pruebas funcionales y validación de usabilidad | ⏳ Pendiente |
+| S15-S16 | Generación del APK final, documentación técnica, video demostrativo y presentación del proyecto | ⏳ Pendiente |
 ---
 
-## Estructura del Repositorio
+# Estructura del Repositorio
 
-```
+```text
 rva-g06-mantenimiento-ar/
 ├── Assets/
-│   ├── Scenes/          ← Escenas Unity
-│   ├── Scripts/         ← Scripts C#
-│   ├── Prefabs/         ← Prefabs del proyecto
-│   ├── Materials/       ← Materiales y shaders
-│   ├── Audio/           ← Clips de audio
-│   └── UI/              ← Assets de interfaz
+│   ├── Scenes/              ← Escenas del proyecto
+│   ├── Scripts/             ← Scripts C#
+│   ├── Prefabs/             ← Prefabs reutilizables
+│   ├── Models/              ← Modelos 3D
+│   ├── Materials/           ← Materiales y shaders
+│   ├── UI/                  ← Recursos de interfaz
+│   ├── Resources/           ← Recursos cargados dinámicamente
+│   └── StreamingAssets/     ← Procedimientos JSON y datos externos
 ├── docs/
-│   ├── arquitectura.md  ← Documento de arquitectura técnica
-│   ├── usabilidad.md    ← Resultados de pruebas de usabilidad
-│   └── capturas/        ← Screenshots y videos
-├── Packages/            ← Manifest de paquetes Unity
-├── ProjectSettings/     ← Configuración del proyecto
-├── .gitignore           ← Unity gitignore
+│   ├── arquitectura.md      ← Arquitectura técnica
+│   ├── procedimientos.md    ← Diseño del procedimiento de mantenimiento
+│   ├── usabilidad.md        ← Resultados de pruebas
+│   └── capturas/            ← Capturas y material multimedia
+├── Packages/                ← Dependencias del proyecto
+├── ProjectSettings/         ← Configuración de Unity
+├── .gitignore               ← Exclusiones de Git
 └── README.md
 ```
 
 ---
 
-## Documentación
+# Arquitectura General
 
-- [Arquitectura técnica](docs/arquitectura.md)
-- [Resultados de usabilidad](docs/usabilidad.md)
-- [Guía de contribución](CONTRIBUTING.md)
+La aplicación sigue una arquitectura modular basada en componentes desacoplados para facilitar el mantenimiento y la escalabilidad del proyecto.
+
+Los procedimientos de mantenimiento serán administrados mediante archivos JSON externos, permitiendo modificar áreas, pasos, advertencias y recursos visuales sin recompilar la aplicación.
+
+Los módulos principales del sistema son:
+
+- Gestión del procedimiento (Procedure Manager)
+- Gestión de datos (JSON)
+- Sistema de Realidad Aumentada
+- Interfaz holográfica
+- Overlays contextuales
+- Recursos visuales
+- Gestión del progreso del usuario
 
 ---
 
-## Video Demo
+# Documentación
 
-> 📹 Agregar link al video demo aquí (YouTube/Drive)
+La documentación técnica se desarrollará progresivamente durante el proyecto e incluirá:
+
+- Arquitectura del sistema
+- Diseño del procedimiento de mantenimiento
+- Manual de usuario
+- Resultados de pruebas y validación
+- Capturas del desarrollo
 
 ---
 
-## Licencia
+# Video Demo
 
-Proyecto académico — Universidad Autónoma del Perú 2026-1.
+El enlace al video demostrativo será agregado al finalizar el desarrollo del proyecto.
+
+---
+
+# Licencia
+
+Proyecto académico desarrollado para el curso **PSISP08075 — Realidad Virtual y Aumentada** de la **Universidad Autónoma del Perú**, correspondiente al semestre **2026-1**.
